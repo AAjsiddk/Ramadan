@@ -60,7 +60,7 @@ export function ResourceLinks() {
     navigator.clipboard.writeText(url);
     toast({
       title: 'تم نسخ الرابط!',
-      description: 'تم نسخ الرابط إلى الحافظة.',
+      description: 'تم نسخ رابط الصفحة إلى الحافظة.',
     });
   };
 
@@ -73,7 +73,7 @@ export function ResourceLinks() {
               <CardTitle className="text-lg">{name}</CardTitle>
               <CardDescription className="mt-1">{description}</CardDescription>
             </div>
-            <div className="p-3 rounded-lg bg-primary/10 flex-shrink-0">
+            <div className="p-3 rounded-lg bg-secondary flex-shrink-0">
               <Icon className="h-6 w-6 text-primary" />
             </div>
           </CardHeader>
