@@ -23,7 +23,11 @@ export default function Home() {
           title: document.title,
           url: window.location.href,
         })
-        .catch(console.error);
+        .catch((error) => {
+          if (error.name !== 'NotAllowedError') {
+            console.error(error);
+          }
+        });
     } else {
       navigator.clipboard.writeText(window.location.href);
       toast({
