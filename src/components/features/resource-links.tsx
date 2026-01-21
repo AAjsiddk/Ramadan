@@ -70,7 +70,7 @@ export function ResourceLinks() {
       {resources.map(({ name, url, Icon, description }) => (
         <Card
           key={name}
-          className="group flex flex-col overflow-hidden transition-all duration-300 ease-in-out bg-card/50 hover:bg-card hover:shadow-primary/10 hover:shadow-lg hover:border-primary/30"
+          className="group flex flex-col overflow-hidden transition-all duration-300 ease-in-out bg-card/50 hover:bg-card hover:shadow-primary/10 hover:shadow-lg hover:border-primary/30 hover:-translate-y-1"
         >
           <CardHeader className="flex flex-row items-start gap-4 p-4 flex-1">
             <div className="p-3 rounded-lg bg-primary/10 flex-shrink-0 transition-colors duration-300">

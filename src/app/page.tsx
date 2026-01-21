@@ -14,7 +14,7 @@ import { useState } from 'react';
 
 export default function Home() {
   const { toast } = useToast();
-  const [isWelcomeOpen, setIsWelcomeOpen] = useState(true);
+  const [isWelcomeOpen, setIsWelcomeOpen] = useState(false);
 
   const handleShare = () => {
     if (navigator.share) {
