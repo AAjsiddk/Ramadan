@@ -11,11 +11,11 @@ import {
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import {
-  ArrowDownToLine,
+  Download,
   Bot,
   ClipboardCopy,
   ExternalLink,
-  Globe,
+  Network,
   MessageCircle,
 } from 'lucide-react';
 import Link from 'next/link';
@@ -25,19 +25,19 @@ const resources = [
     name: 'تحميل الدفتر',
     description: 'ملف PDF يحتوي على معلومات هامة.',
     url: 'https://drive.google.com/uc?export=download&id=1Cs63Cze5ApCqNfeWRZ_pyM_xIZoB87zC',
-    Icon: (props: ComponentProps<'svg'>) => <ArrowDownToLine {...props} />,
+    Icon: (props: ComponentProps<'svg'>) => <Download {...props} />,
   },
   {
     name: 'تحميل التطبيق',
     description: 'تطبيق Kilonotes لتدوين الملاحظات.',
     url: 'https://play.google.com/store/apps/details?id=com.topstack.kilonotes.pad',
-    Icon: (props: ComponentProps<'svg'>) => <ArrowDownToLine {...props} />,
+    Icon: (props: ComponentProps<'svg'>) => <Download {...props} />,
   },
   {
     name: 'موقع نجاتك بيدك',
     description: 'موقع للأذكار والمواظبة على الطاعات.',
     url: 'https://remembrances-1.vercel.app/',
-    Icon: (props: ComponentProps<'svg'>) => <Globe {...props} />,
+    Icon: (props: ComponentProps<'svg'>) => <Network {...props} />,
   },
   {
     name: 'بوت التواصل',
@@ -69,7 +69,7 @@ export function ResourceLinks() {
       {resources.map(({ name, url, Icon, description }) => (
         <Card
           key={name}
-          className="group flex flex-col overflow-hidden transition-all duration-300 ease-in-out bg-card hover:shadow-primary/10 hover:shadow-lg hover:border-primary/30 hover:-translate-y-1"
+          className="group flex flex-col overflow-hidden transition-all duration-300 ease-in-out bg-card hover:border-primary/50 hover:bg-accent hover:-translate-y-1"
         >
           <CardHeader className="flex flex-row items-start gap-4 p-4 flex-1">
             <div className="p-3 rounded-lg bg-primary/10 flex-shrink-0 transition-colors duration-300">
@@ -82,7 +82,7 @@ export function ResourceLinks() {
               </CardDescription>
             </div>
           </CardHeader>
-          <CardFooter className="flex items-center justify-end gap-2 bg-secondary p-3 mt-auto">
+          <CardFooter className="flex items-center justify-end gap-2 bg-secondary/50 p-3 mt-auto">
             <Button
               variant="ghost"
               size="sm"
