@@ -1,11 +1,25 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
+import { Alegreya, Cairo } from 'next/font/google';
+import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'دفتر رمضان',
   description: 'أهلاً بك، اختر الرابط المناسب لك',
 };
+
+const cairo = Cairo({
+  subsets: ['arabic', 'latin'],
+  weight: ['400', '700'],
+  variable: '--font-cairo',
+});
+
+const alegreya = Alegreya({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-alegreya',
+});
 
 export default function RootLayout({
   children,
@@ -14,19 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Cairo:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="font-body antialiased">
+      <body
+        className={cn(
+          'font-body antialiased',
+          cairo.variable,
+          alegreya.variable
+        )}
+      >
         {children}
         <Toaster />
       </body>
