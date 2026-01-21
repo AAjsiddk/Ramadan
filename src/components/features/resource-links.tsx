@@ -11,12 +11,13 @@ import {
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import {
-  Download,
-  ShieldCheck,
+  ArrowDownToLine,
+  Bot,
   ClipboardCopy,
   ExternalLink,
-  Bot,
-  Rss,
+  Globe,
+  MessageCircle,
+  SquareArrowDown,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -25,19 +26,19 @@ const resources = [
     name: 'تحميل الدفتر',
     description: 'ملف PDF يحتوي على معلومات هامة.',
     url: 'https://drive.google.com/uc?export=download&id=1Cs63Cze5ApCqNfeWRZ_pyM_xIZoB87zC',
-    Icon: (props: ComponentProps<'svg'>) => <Download {...props} />,
+    Icon: (props: ComponentProps<'svg'>) => <ArrowDownToLine {...props} />,
   },
   {
     name: 'تحميل التطبيق',
     description: 'تطبيق Kilonotes لتدوين الملاحظات.',
     url: 'https://play.google.com/store/apps/details?id=com.topstack.kilonotes.pad',
-    Icon: (props: ComponentProps<'svg'>) => <Download {...props} />,
+    Icon: (props: ComponentProps<'svg'>) => <SquareArrowDown {...props} />,
   },
   {
     name: 'موقع نجاتك بيدك',
     description: 'موقع للأذكار والمواظبة على الطاعات.',
     url: 'https://remembrances-1.vercel.app/',
-    Icon: (props: ComponentProps<'svg'>) => <ShieldCheck {...props} />,
+    Icon: (props: ComponentProps<'svg'>) => <Globe {...props} />,
   },
   {
     name: 'بوت التواصل',
@@ -49,7 +50,7 @@ const resources = [
     name: 'قناة الواتساب',
     description: 'انضم إلى قناتنا على الواتساب.',
     url: 'https://whatsapp.com/channel/0029VbCC6Ta6buMTCGX6Um0F',
-    Icon: (props: ComponentProps<'svg'>) => <Rss {...props} />,
+    Icon: (props: ComponentProps<'svg'>) => <MessageCircle {...props} />,
   },
 ];
 
