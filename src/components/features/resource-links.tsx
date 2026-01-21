@@ -17,7 +17,6 @@ import {
   ExternalLink,
   Globe,
   MessageCircle,
-  SquareArrowDown,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -32,7 +31,7 @@ const resources = [
     name: 'تحميل التطبيق',
     description: 'تطبيق Kilonotes لتدوين الملاحظات.',
     url: 'https://play.google.com/store/apps/details?id=com.topstack.kilonotes.pad',
-    Icon: (props: ComponentProps<'svg'>) => <SquareArrowDown {...props} />,
+    Icon: (props: ComponentProps<'svg'>) => <ArrowDownToLine {...props} />,
   },
   {
     name: 'موقع نجاتك بيدك',
@@ -70,7 +69,7 @@ export function ResourceLinks() {
       {resources.map(({ name, url, Icon, description }) => (
         <Card
           key={name}
-          className="group flex flex-col overflow-hidden transition-all duration-300 ease-in-out bg-card/50 hover:bg-card hover:shadow-primary/10 hover:shadow-lg hover:border-primary/30 hover:-translate-y-1"
+          className="group flex flex-col overflow-hidden transition-all duration-300 ease-in-out bg-card hover:shadow-primary/10 hover:shadow-lg hover:border-primary/30 hover:-translate-y-1"
         >
           <CardHeader className="flex flex-row items-start gap-4 p-4 flex-1">
             <div className="p-3 rounded-lg bg-primary/10 flex-shrink-0 transition-colors duration-300">
@@ -83,7 +82,7 @@ export function ResourceLinks() {
               </CardDescription>
             </div>
           </CardHeader>
-          <CardFooter className="flex items-center justify-end gap-2 bg-black/10 dark:bg-black/20 p-3 mt-auto">
+          <CardFooter className="flex items-center justify-end gap-2 bg-secondary p-3 mt-auto">
             <Button
               variant="ghost"
               size="sm"
