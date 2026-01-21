@@ -30,9 +30,11 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-background text-foreground font-body">
       <Header />
       <main className="flex-1 w-full max-w-4xl mx-auto p-4 md:p-6 lg:p-8">
-        <div className="text-center space-y-4 mb-8">
-          <h2 className="text-2xl font-bold font-headline">أهلاً بك في دفتر رمضان</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center space-y-6 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary">
+            أهلاً بك في دفتر رمضان
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             رمضان فرصة حقيقية للتقرب إلى الله وترتيب أولوياتنا. هذا الدفتر
             مصمم ليكون رفيقك، يساعدك على الالتزام بهدوء وسكينة، خطوة بخطوة،
             بلا ضغط أو تعقيد. نسأل الله أن يوفقك ويتقبل منك صالح الأعمال.
@@ -45,7 +47,7 @@ export default function Home() {
 
         <ResourceLinks />
 
-        <p className="text-center text-sm text-muted-foreground mt-8">
+        <p className="text-center text-sm text-muted-foreground mt-12">
           الرجاء الدعاء لكل من ساهم في هذا العمل.
         </p>
       </main>
