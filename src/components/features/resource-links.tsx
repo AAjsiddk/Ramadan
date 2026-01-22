@@ -18,7 +18,7 @@ const resources = [
   {
     name: 'تحميل التطبيق',
     description: 'تطبيق Kilonotes لتدوين الملاحظات.',
-    url: 'https://play.google.com/store/apps/details?id=com.topstack.kilonotes.pad',
+    url: 'https://play.google.com/store/apps/details?id=com.luminpdfapp',
     Icon: Download,
   },
   {
