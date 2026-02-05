@@ -12,7 +12,7 @@ const resources = [
   {
     name: 'تحميل الدفتر',
     description: 'ملف PDF يحتوي على معلومات هامة.',
-    url: 'https://drive.google.com/uc?export=download&id=1Cs63Cze5ApCqNfeWRZ_pyM_xIZoB87zC',
+    url: 'https://drive.google.com/file/d/1dN5zF9ZFABCYfGoGMHRFPzf3axNMulQs/view?usp=drivesdk',
     Icon: Download,
   },
   {
